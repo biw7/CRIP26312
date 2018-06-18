@@ -1,0 +1,63 @@
+
+
+int ""(char *SENHA) {
+    
+char *senha;
+
+senha = (char *) malloc(10 * sizeof(senha));
+gets (senha);
+    
+int tam = strlen (senha);
+int i;
+int maj = 0;
+int min = 0;
+int espec = 0;
+int num = 0;
+
+for (i = 0; i < tam; i++){
+    
+    if (senha[i] >  64 && senha [i] < 91)
+    {
+        maj++;
+    }
+    
+    if (senha[i] >  96 && senha [i] < 123)
+    {
+        min++;
+    }
+    
+    if (senha[i] >  31 && senha [i] < 48 || senha [i] > 57 && senha[i] < 64)
+    {
+        espec++;
+    }
+    
+    if (senha[i] >  47 && senha [i] < 58)
+    {
+        num++;
+    }
+}
+
+int flag;
+
+for (i=0; i < tam; i++){
+    
+    if (maj == 0 || min == 0 || espec == 0|| num == 0){
+        
+        flag = 0;
+    }
+
+    else {
+        flag = 1;
+        
+    }
+    
+    
+}
+
+
+if (flag == 0){
+    printf ("Senha invalida!\n");
+}
+
+ return FLAG;
+}
